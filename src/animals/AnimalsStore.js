@@ -1,11 +1,15 @@
 import { makeAutoObservable } from 'mobx'
+import {remove} from 'lodash'
 
 export const AnimalsStore = makeAutoObservable({
   animals: ["Tiger"],
-  addAnimal: (animal) => {
-    AnimalsStore.animals.push(animal);
+  add: (animal) => {
+    AnimalsStore.animals.push(animal)
+  },
+  remove: (animal) => {
+    remove(AnimalsStore.animals, (i) => i === animal)
   },
   get animalsCount() {
-    return AnimalsStore.animals.length;
+    return AnimalsStore.animals.length
   },
 })

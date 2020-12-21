@@ -9,10 +9,13 @@ export default function App() {
     <StoreProvider>
       <BrowserRouter>
         <Switch>
-          <Route path="/" exact render={() => <RiversPage />} />
-          <Route path="/rivers" exact render={() => <RiversPage />} />
-          <Route path="/animals" exact render={() => <AnimalsPage />} />
-          <Route path="/animals/:name" exact render={({match}) => <AnimalsPage match={match}/>} />
+          <Route exact path="/" render={() => <RiversPage />} />
+          <Route exact path="/rivers" render={() => <RiversPage />} />
+          <Route exact path="/animals" render={() => <AnimalsPage />} />
+          {/* <Route path="/animals/:name" render={({match}) => <AnimalsPage match={match}/>} /> */}
+          <Route exact path="/animals/:name" validate={(params) => params.name === "giraffe"}>
+            <AnimalsPage />
+          </Route>
         </Switch>
       </BrowserRouter>
     </StoreProvider>
