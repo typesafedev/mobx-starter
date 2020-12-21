@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
 import { StoreContext } from "../stores/storeContext";
-import { useObserver } from "mobx-react";
+import { observer } from "mobx-react"
 
-export const AnimalsHeader = () => {
-  const { animalsStore } = useContext(StoreContext);
-  return useObserver(() => <h1>{animalsStore.animalsCount} Animals!</h1>);
-};
+export const AnimalsHeader = observer(() => {
+  const { animalsStore } = useContext(StoreContext)
+  return <h1>{animalsStore.animalsCount} Animals!</h1>
+})

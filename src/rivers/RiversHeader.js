@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
 import { StoreContext } from "../stores/storeContext";
-import { useObserver } from "mobx-react";
+import { observer } from "mobx-react";
 
-export const RiversHeader = () => {
+export const RiversHeader = observer(() => {
   const { riversStore } = useContext(StoreContext);
-  return useObserver(() => <h1>{riversStore.count} Rivers!</h1>);
-};
+  return <h1>{riversStore.count} Rivers!</h1>
+});

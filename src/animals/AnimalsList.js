@@ -1,11 +1,11 @@
 import React, { useContext } from "react";
 import { StoreContext } from "../stores/storeContext";
-import { useObserver } from "mobx-react";
+import { observer } from "mobx-react";
 
-export const AnimalsList = () => {
+export const AnimalsList = observer(() => {
   const { animalsStore } = useContext(StoreContext);
 
-  return useObserver(() => (
+  return (
     <ul>
       {animalsStore.animals.map((animal) => (
         <li key={animal}>
@@ -16,5 +16,5 @@ export const AnimalsList = () => {
         </li>
       ))}
     </ul>
-  ));
-};
+  )
+});
