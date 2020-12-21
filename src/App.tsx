@@ -4,7 +4,7 @@ import { RiversPage } from "./rivers";
 import { StoreProvider } from "./stores/storeContext";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
-export const App = () => {
+export const App = (): JSX.Element => {
   return (
     <StoreProvider>
       <BrowserRouter>

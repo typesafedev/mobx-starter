@@ -13,6 +13,6 @@ type Props = {
   children: React.ReactNode;
 };
 
-export const StoreProvider = ({ children }: Props) => {
+export const StoreProvider = ({ children }: Props): JSX.Element => {
   return <StoreContext.Provider value={RootStore}>{children}</StoreContext.Provider>;
 };

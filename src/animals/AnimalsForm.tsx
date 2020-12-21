@@ -1,7 +1,7 @@
-import React, { useContext, useState } from "react"
-import { StoreContext } from '../stores/storeContext'
+import React, { useContext, useState } from "react";
+import { StoreContext } from "../stores/storeContext";
 
-export const AnimalsForm = () => {
+export const AnimalsForm = (): JSX.Element => {
   const { animalsStore } = useContext(StoreContext);
   const [animal, setAnimal] = useState("");
 

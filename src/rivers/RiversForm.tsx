@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react"
 import { StoreContext } from '../stores/storeContext'
 
-export const RiversForm = () => {
+export const RiversForm = (): JSX.Element => {
   const { riversStore } = useContext(StoreContext);
   const [river, setRiver] = useState("");
 

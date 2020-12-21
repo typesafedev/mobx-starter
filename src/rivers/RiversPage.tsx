@@ -1,7 +1,7 @@
 import React from "react"
 import { RiversForm, RiversHeader, RiversList } from "."
 
-export const RiversPage = () => {
+export const RiversPage = (): JSX.Element => {
   return (
     <main>
       <RiversHeader />
