@@ -8,7 +8,7 @@ export const AnimalsForm = () => {
   return (
     <form
       onSubmit={(e) => {
-        animalsStore.addAnimal(animal);
+        animalsStore.add(animal);
         setAnimal("");
         e.preventDefault();
       }}

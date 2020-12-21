@@ -1,9 +1,9 @@
 import React from "react";
 import { useParams } from "react-router-dom"
-import { AnimalsForm, AnimalsHeader, AnimalsList } from "./";
+import { AnimalsForm, AnimalsHeader, AnimalsList } from ".";
 
 export const AnimalsPage = () => {
-  const { name } = useParams()
+  const { name } = useParams<{ name: string }>()
   console.log(`name ${name}`)
   return (
     <main>

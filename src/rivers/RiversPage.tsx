@@ -1,5 +1,5 @@
 import React from "react"
-import { RiversForm, RiversHeader, RiversList } from "./"
+import { RiversForm, RiversHeader, RiversList } from "."
 
 export const RiversPage = () => {
   return (

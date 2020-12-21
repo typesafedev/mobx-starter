@@ -7,7 +7,7 @@ export const AnimalsList = observer(() => {
 
   return (
     <ul>
-      {animalsStore.animals.map((animal) => (
+      {animalsStore.animals.map((animal: string) => (
         <li key={animal}>
           {animal}
           <button type="button" onClick={() => animalsStore.remove(animal)}>

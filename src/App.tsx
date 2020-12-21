@@ -4,7 +4,7 @@ import { RiversPage } from "./rivers";
 import { StoreProvider } from "./stores/storeContext";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
-export default function App() {
+export const App = () => {
   return (
     <StoreProvider>
       <BrowserRouter>
@@ -13,11 +13,11 @@ export default function App() {
           <Route exact path="/rivers" render={() => <RiversPage />} />
           <Route exact path="/animals" render={() => <AnimalsPage />} />
           {/* <Route path="/animals/:name" render={({match}) => <AnimalsPage match={match}/>} /> */}
-          <Route exact path="/animals/:name" validate={(params) => params.name === "giraffe"}>
+          <Route exact path="/animals/:name" validate={(params: { name: string }) => params.name === "giraffe"}>
             <AnimalsPage />
           </Route>
         </Switch>
       </BrowserRouter>
     </StoreProvider>
   );
-}
+};

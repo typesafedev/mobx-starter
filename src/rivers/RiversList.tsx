@@ -7,7 +7,7 @@ export const RiversList = observer(() => {
 
   return (
     <ul>
-      {riversStore.rivers.map((river) => (
+      {riversStore.rivers.map((river: string) => (
         <li key={river}>
           {river}
           <button type="button" onClick={() => riversStore.remove(river)}>
